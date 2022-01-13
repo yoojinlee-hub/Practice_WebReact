@@ -1,15 +1,27 @@
 import logo from './logo.svg';
 import './App.css';
-import Bye from './Bye';
-import KoBay from './Hello';
+import React, { useState } from 'react';
 
 function App() {
+  const [number, setNumber] = useState(0);
+
+  function plusClick() {
+      setNumber(number + 1);
+  }
+  function minusClick() {
+    setNumber(number - 1);
+  }
+  function multiClick() {
+    setNumber(number * 2);
+  }
+
   return (
-    <div>
-      <KoBay/>
-      <Bye/>
-    </div>
-      
+      <div>
+          <div>값 : {number}</div>
+          <button onClick={plusClick}>+1</button>
+          <button onClick={minusClick}>-1</button>
+          <button onClick={multiClick}>*2</button>
+      </div>
   );
 }
 
