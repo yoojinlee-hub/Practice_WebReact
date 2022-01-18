@@ -1,34 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
-import React, { useState } from 'react';
-import Button from './Button';
-import Gugu from './Gugu';
-import Layout from './Layout';
+// src/App.js
+import Layout from './components/shared/Layout';
+import React from 'react';
+import {useState} from 'react';
 
 function App() {
-  const [number, setNumber] = useState(0);
 
-  function onClickIncrease() {
-    setNumber(number + 1);
-  }
-  function onClickDecrease() {
-    setNumber(number - 1);
-  }
-  function onClickMultiply() {
-    setNumber(number * 2);
+  const [check,useCheck]=useState(false);
+
+  function Onclick(){
+    useCheck(check=>!check)//클릭때마다 ! not 실행
   }
 
   return (
-      <Layout>
-        <div>값 :{number}
-          <Gugu>
-            {number}
-          </Gugu>
-        </div>
-        <Button onClick={onClickIncrease} text="+1" />
-        <Button onClick={onClickDecrease} text="-1" />
-        <Button onClick={onClickMultiply} text="*2" />
-      </Layout>
+    <Layout>
+      <div>
+        <button onClick={Onclick}>Liked</button>
+        {check && <div>♥</div>}
+        {!check && " "}
+      </div>
+    </Layout>  
+    
   );
 }
 
