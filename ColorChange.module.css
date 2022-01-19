@@ -1,12 +1,12 @@
-.color{
+.ifCheck{
     color:red;
     width: 50px;
     text-align: center;
     font-size: medium;
 }
-.noColor{
+.ifNoCheck{
     color:blue;
     width: 50px;
     text-align: center; 
-    font-size: small;
+    font-size: medium;
 }

@@ -2,22 +2,22 @@
 import Layout from './components/shared/Layout';
 import React from 'react';
 import {useState} from 'react';
+import styles from "./ColorChange.module.css";
 
 function App() {
 
   const [check,useCheck]=useState(false);
 
   function Onclick(){
-    useCheck(check=>!check)//클릭때마다 ! not 실행
+    useCheck(check=>!check)
   }
 
   return (
     <Layout>
-      <div>
+        {check?
+          <div className={styles.ifCheck}>♥</div>: <div className={styles.ifNoCheck}>♡</div>
+        }
         <button onClick={Onclick}>Liked</button>
-        {check && <div>♥</div>}
-        {!check && " "}
-      </div>
     </Layout>  
     
   );
