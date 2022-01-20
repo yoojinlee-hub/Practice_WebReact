@@ -1,26 +1,18 @@
 // src/App.js
-import Layout from './components/shared/Layout';
-import React from 'react';
-import {useState} from 'react';
-import styles from "./ColorChange.module.css";
-
+import { Route, Routes } from 'react-router-dom';
+import Home from './pages/Home';
+import Explore from './pages/Explore';
+import Subscription from './pages/Subscription';
+import Quiz9 from './pages/Quiz9';
 function App() {
-
-  const [check,useCheck]=useState(false);
-
-  function Onclick(){
-    useCheck(check=>!check)
-  }
-
-  return (
-    <Layout>
-        {check?
-          <div className={styles.ifCheck}>♥</div>: <div className={styles.ifNoCheck}>♡</div>
-        }
-        <button onClick={Onclick}>Liked</button>
-    </Layout>  
-    
-  );
+    return (
+        <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/explore" element={<Explore />} />
+            <Route path="/subscription" element={<Subscription />} />
+            <Route path="/Quiz_9" element={<Quiz9 />} />
+        </Routes>
+    );
 }
 
 export default App;

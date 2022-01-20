@@ -1,0 +1,17 @@
+.ifCheck{
+    color:red;
+    width: 50px;
+    text-align: center;
+    font-size: medium;
+}
+.ifNoCheck{
+    color:blue;
+    width: 50px;
+    text-align: center; 
+    font-size: medium;
+}
+.make_margin{
+    position: relative;
+    margin-left:60px;
+    bottom: 90px;
+}

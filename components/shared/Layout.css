@@ -16,12 +16,3 @@
   .contents {
     flex: 1;
   }
-  .color{
-      background-color: red;
-      width: 50px;
-      text-align: center;
-  }
-  .noClolor{
-    width: 50px;
-    text-align: center; 
-  }
