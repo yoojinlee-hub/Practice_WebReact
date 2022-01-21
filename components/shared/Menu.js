@@ -1,21 +1,32 @@
 import { Link } from 'react-router-dom';
 import styles from './Menu.module.css';
+import { TiHome } from 'react-icons/ti';
+import { FaRegCompass } from 'react-icons/fa';
+import { MdSubscriptions } from 'react-icons/md';
 
-function Menu() {
+function Menu({ activeMenu }) {
   return (
-    <div className={styles.Menu}>
-      <div>
-        <Link to="/">홈</Link>
-      </div>
-      <div>
-        <Link to="/explore">탐색</Link>
-      </div>
-      <div>
-        <Link to="/subscription">구독</Link>
-      </div>
-      <div>
-        <Link to="/Quiz_9">퀴즈</Link>
-      </div>
+    <div className={styles.menu}>
+      <Link
+        to="/"
+        className={activeMenu === 'home' ? styles.focused : styles.link}
+      >
+        <TiHome className={styles.icon} />홈
+      </Link>
+      <Link
+        to="/explore"
+        className={activeMenu === 'explore' ? styles.focused : styles.link}
+      >
+        <FaRegCompass className={styles.icon} />
+        탐색
+      </Link>
+      <Link
+        to="/subscription"
+        className={activeMenu === 'subscription' ? styles.focused : styles.link}
+      >
+        <MdSubscriptions className={styles.icon} />
+        구독
+      </Link>
     </div>
   );
 }

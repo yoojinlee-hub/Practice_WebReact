@@ -6,16 +6,16 @@ import { IoSearchOutline } from 'react-icons/io5';
 import { BsGrid3X3Gap } from 'react-icons/bs';
 import { HiOutlineDotsVertical } from 'react-icons/hi';
 
-function Header() {
+function Header({ onClickHamburger }) {
   return (
     <div className={styles.header}>
       <div className={styles.tab}>
-        <FiMenu className={styles.icon} />
+        <FiMenu className={styles.icon} onClick={onClickHamburger} />
         <img src={youtube_logo} alt="로고" className={styles.logo} />
       </div>
-      <div className={styles['center-tab']}>
+      <div className={styles["center-tab"]}>
         <input className={styles.input} />
-        <IoSearchOutline className={styles['search-icon']} />
+        <IoSearchOutline className={styles["search-icon"]} />
       </div>
       <div className={styles.tab}>
         <BsGrid3X3Gap className={styles.icon} />

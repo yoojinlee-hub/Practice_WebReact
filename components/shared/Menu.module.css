@@ -1,7 +1,39 @@
-.Menu{
-    margin-left:0px;
-    padding: 0px;
-    margin-top:56px;
-    width: 50px;
-    position: relative;
-}
+.menu {
+    position: fixed;
+    width: 240px;
+    top: 56px;
+    padding: 12px 12px 12px 0;
+    box-sizing: border-box;
+  }
+  .link {
+    display: flex;
+    height: 40px;
+    padding: 0 24px;
+    background-color: white;
+    color: black;
+    font-size: 14px;
+    text-decoration: none;
+    align-items: center;
+  }
+  .link:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+  
+  .icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 24px;
+  }
+  .focused {
+    display: flex;
+    height: 40px;
+    padding: 0 24px;
+    background-color: rgba(0, 0, 0, 0.1);
+    color: black;
+    font-size: 14px;
+    text-decoration: none;
+    align-items: center;
+  }
+  .focused:hover {
+    background-color: rgba(0, 0, 0, 0.15);
+  }

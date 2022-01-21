@@ -1,4 +1,4 @@
-// src/App.js
+
 import {useState} from 'react';
 import styles from "./ColorChange.module.css";
 import Layout from '../components/shared/Layout';
