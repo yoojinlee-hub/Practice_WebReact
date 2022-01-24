@@ -18,3 +18,8 @@
   margin-left: 240px;
   flex: 1;
 }
+@media screen and (max-width: 911px) {
+  .contents {
+    margin-left: 72px;
+  }
+}

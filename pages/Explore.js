@@ -1,11 +1,11 @@
-// src/pages/Explore.js
+// Expolore 컴포넌트
 import Layout from '../components/shared/Layout';
-import styles from './pages.module.css';
-import makeMargin from './pages.module.css';
+import ContentsLayout from '../components/shared/ContentsLayout';
+
 function Explore() {
   return (
-    <Layout className={makeMargin.make_margin} activeMenu="explore">
-      <div>* 탐색</div>
+    <Layout activeMenu="explore">
+      <ContentsLayout>컨텐츠컨텐츠컨텐츠컨텐츠컨텐츠컨텐츠컨텐츠컨텐츠컨텐츠컨텐츠컨텐츠컨텐츠컨텐츠컨텐츠컨텐츠컨텐츠컨텐츠컨텐츠컨텐츠컨텐츠컨텐츠컨텐츠컨텐츠컨텐츠컨텐츠컨텐츠컨텐츠컨텐츠컨텐츠컨텐츠컨텐츠컨텐츠컨텐츠</ContentsLayout>
     </Layout>
   );
 }
